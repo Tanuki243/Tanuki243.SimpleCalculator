@@ -9,12 +9,10 @@ namespace Tanuki243.SimpleCalculator
             Rechenoperation ro = new Rechenoperation();
             UserInput userInput = new UserInput();
             
-            Console.Write("Enter Double: ");
-            
             // Read User Input
-            double zahl1 = userInput.userInputDouble();
-            string operation = userInput.userInputString();
-            double zahl2 = userInput.userInputDouble();
+            double zahl1 = userInput.userInputDouble("Geben Sie eine Zahl ein: ");
+            string operation = userInput.userInputString("Geben Sie eine Rechenoperation ein: ");
+            double zahl2 = userInput.userInputDouble("Geben Sie eine Zahl ein: ");
 
             // Call operation to calculate result
             double ergebnis = ro.Rechnen(zahl1, zahl2, operation);
