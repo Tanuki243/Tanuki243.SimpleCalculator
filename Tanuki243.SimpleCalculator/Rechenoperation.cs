@@ -1,8 +1,8 @@
 ﻿namespace Tanuki243.SimpleCalculator
 {
-    class Rechenoperation
+    public class Rechenoperation
     {
-        public int Rechnen(int zahl1, int zahl2, string rechenOperator)
+        public double Rechnen(double zahl1, double zahl2, string rechenOperator)
         {
             switch (rechenOperator)
             {

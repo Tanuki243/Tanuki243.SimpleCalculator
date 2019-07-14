@@ -7,25 +7,17 @@ namespace Tanuki243.SimpleCalculator
         static void Main(string[] args)
         {
             Rechenoperation ro = new Rechenoperation();
-
-            // Declare Variables
-            string zahl1String;
-            string operation;
-            string zahl2String;
+            UserInput userInput = new UserInput();
             
-            Console.Write("Enter integer: ");
+            Console.Write("Enter Double: ");
             
             // Read User Input
-            zahl1String = Console.ReadLine();
-            operation = Console.ReadLine();
-            zahl2String = Console.ReadLine();
-
-            // Convert Strings to Integer
-            int zahl1 = Int32.Parse(zahl1String);
-            int zahl2 = Int32.Parse(zahl2String);
+            double zahl1 = userInput.userInputDouble();
+            string operation = userInput.userInputString();
+            double zahl2 = userInput.userInputDouble();
 
             // Call operation to calculate result
-            int ergebnis = ro.Rechnen(zahl1, zahl2, operation); ;
+            double ergebnis = ro.Rechnen(zahl1, zahl2, operation);
 
             Console.WriteLine("Ergebnis " + ergebnis);
 
