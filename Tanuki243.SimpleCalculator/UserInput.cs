@@ -18,7 +18,7 @@ namespace Tanuki243.SimpleCalculator
             return userInput;
         }
 
-        public decimal userInputDouble(String userMessage)
+        public decimal userInputDecimal(String userMessage)
         {
             string checkUserInput;
 
