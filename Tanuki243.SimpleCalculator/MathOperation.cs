@@ -2,7 +2,7 @@
 {
     public class MathOperation
     {
-        public double Rechnen(double number1, double number2, string mathOperator)
+        public decimal Rechnen(decimal number1, decimal number2, string mathOperator)
         {
             switch (mathOperator)
             {

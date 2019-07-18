@@ -21,7 +21,7 @@ namespace Tanuki243.SimpleCalculator
             return userInput;
         }
 
-        public double userInputDouble(String userMessage)
+        public decimal userInputDouble(String userMessage)
         {
             string checkUserInput;
 
@@ -31,7 +31,7 @@ namespace Tanuki243.SimpleCalculator
 
             } while(checkUserInput.Count() == 0);
 
-            double userInput = Double.Parse(checkUserInput);
+            decimal userInput = Decimal.Parse(checkUserInput);
 
             return userInput;
         }

@@ -10,12 +10,12 @@ namespace Tanuki243.SimpleCalculator
             UserInput userInput = new UserInput();
             
             // Read User Input
-            double number1 = userInput.userInputDouble("Enter a number: ");
+            decimal number1 = userInput.userInputDouble("Enter a number: ");
             string operation = userInput.userInputString("Enter the Math Operator: ");
-            double number2 = userInput.userInputDouble("Enter a number: ");
+            decimal number2 = userInput.userInputDouble("Enter a number: ");
 
             // Call operation to calculate result
-            double result = mathOperation.Rechnen(number1, number2, operation);
+            decimal result = mathOperation.Rechnen(number1, number2, operation);
 
             Console.WriteLine("Result: " + result);
 
