@@ -6,18 +6,18 @@ namespace Tanuki243.SimpleCalculator
     {
         static void Main(string[] args)
         {
-            Rechenoperation ro = new Rechenoperation();
+            MathOperation mathOperation = new MathOperation();
             UserInput userInput = new UserInput();
             
             // Read User Input
-            double zahl1 = userInput.userInputDouble("Geben Sie eine Zahl ein: ");
-            string operation = userInput.userInputString("Geben Sie eine Rechenoperation ein: ");
-            double zahl2 = userInput.userInputDouble("Geben Sie eine Zahl ein: ");
+            double number1 = userInput.userInputDouble("Enter a number: ");
+            string operation = userInput.userInputString("Enter the Math Operator: ");
+            double number2 = userInput.userInputDouble("Enter a number: ");
 
             // Call operation to calculate result
-            double ergebnis = ro.Rechnen(zahl1, zahl2, operation);
+            double result = mathOperation.Rechnen(number1, number2, operation);
 
-            Console.WriteLine("Ergebnis " + ergebnis);
+            Console.WriteLine("Result: " + result);
 
             // Close Console
             Console.ReadLine();
