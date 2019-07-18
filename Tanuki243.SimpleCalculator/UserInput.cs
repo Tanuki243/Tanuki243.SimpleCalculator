@@ -22,7 +22,8 @@ namespace Tanuki243.SimpleCalculator
         {
             string checkUserInput;
 
-            do {
+            do
+            {
                 Console.Write(userMessage);
                 checkUserInput = Console.ReadLine();
 
