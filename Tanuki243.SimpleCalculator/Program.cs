@@ -8,26 +8,25 @@ namespace Tanuki243.SimpleCalculator
         {
             MathOperation mathOperation = new MathOperation();
             UserInput userInput = new UserInput();
+            RepeatCalculation repeatCalculation = new RepeatCalculation();
             
-            string repeat;
-
+            bool repeat;
+            
             do
             {
-            // Read User Input
-            decimal number1 = userInput.userInputDecimal("Enter a number: ");
-            string operation = userInput.userInputString("Enter the Math Operator: ");
-            decimal number2 = userInput.userInputDecimal("Enter a number: ");
+                // Read User Input
+                decimal number1 = userInput.userInputDecimal("Enter a number: ");
+                string operation = userInput.userInputString("Enter the Math Operator: ");
+                decimal number2 = userInput.userInputDecimal("Enter a number: ");
 
-            // Call operation to calculate result
-            decimal result = mathOperation.Rechnen(number1, number2, operation);
+                // Call operation to calculate result
+                decimal result = mathOperation.Rechnen(number1, number2, operation);
 
-            Console.WriteLine("Result: " + result);
+                Console.WriteLine("Result: " + result);
 
-            //Ask User if there should be another Calculation
-            Console.WriteLine("Do You want to do another Calculation? Type J for more and N to close the Calculator");
-            repeat = Console.ReadLine();
-
-            } while (repeat.Contains("J") == true);
+                //Ask User if there should be another Calculation
+                repeat = repeatCalculation.repeatCalculation();
+            } while (repeat == true);
 
             // Close Console
             Console.ReadLine();
