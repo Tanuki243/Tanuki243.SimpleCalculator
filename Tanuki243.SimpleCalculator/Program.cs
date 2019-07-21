@@ -16,7 +16,7 @@ namespace Tanuki243.SimpleCalculator
             {
                 // Read User Input
                 decimal number1 = userInput.userInputDecimal("Enter a number: ");
-                string operation = userInput.userInputString("Enter the Math Operator: ");
+                string operation = userInput.userInputMathOperator("Enter the Math Operator: ");
                 decimal number2 = userInput.userInputDecimal("Enter a number: ");
 
                 // Call operation to calculate result

@@ -9,11 +9,26 @@ namespace Tanuki243.SimpleCalculator
         {
             string userInput;
 
-            do {
+            do
+            {
                 Console.Write(userMessage);
 
                 userInput = Console.ReadLine();
             } while(userInput.Count() == 0);
+
+            return userInput;
+        }
+
+        public string userInputMathOperator(String userMessage)
+        {
+            string userInput;
+
+            do
+            {
+                Console.Write(userMessage);
+
+                userInput = Console.ReadLine();
+            } while(userInput.Equals("+") == false && userInput.Equals("-") == false && userInput.Equals("*") == false & userInput.Equals("/") == false);
 
             return userInput;
         }
