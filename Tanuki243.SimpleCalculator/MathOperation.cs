@@ -15,7 +15,7 @@
                 case "/":
                     return number1 / number2;
                 default:
-                    return 0;
+                    return 0;test
             }
         }
     }
